@@ -2,13 +2,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /***  configurações iniciais   *******************************************/
-/*
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+    text-decoration: none;
 }
-*/
+
+/***   pre-definindo cores   ***********************************************/
+:root{
+    --preto: #000000;
+    --branco: #ffffff;
+    --cinza-escuro: #222222;
+    --cinza-medio: #333333;
+    --cinza-claro: #f5f5f5;
+    --cinza-fonte1: #7a7a7a;
+    --cinza-fonte2: #9f9f9f;
+    --cinza-fonte3: #656565;
+    --verde-fonte: #80c34a;
+    --btn-verde: #61ce70;
+    --btn-laranja: #f39433;
+    --bg-azul1: #0d8cc1;
+    --bg-azul2: #076c87;
+}
+
+/***   estrutura padrão   ***************************************************/
+.estrutura{
+    max-width: 1280px;
+    margin: auto;
+}
+
+/***   pré-cabeçalho   *****************************************************/
+menu #topo{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 130px;
+}
+
+menu .topo-itens a{
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav #nav-menu{
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-right: 114px;
+}
+
+nav .nav-itens a{
+    position: relative;
+    display: inline-block;
+    margin-right: 25px;
+}
+
+#sub-xereta .sub-nav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+#sub-vittal .sub-nav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+header .logo{
+    width: 115px;
+}
