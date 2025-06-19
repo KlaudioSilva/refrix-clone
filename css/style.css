@@ -1,5 +1,5 @@
-/*** importando as fontes ***/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/*** importando as fontes 'Opens sans' e 'Roboto'   **********************/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /***  configurações iniciais   *******************************************/
 *{
@@ -24,6 +24,7 @@
     --verde-fonte: #80c34a;
     --btn-verde: #61ce70;
     --btn-laranja: #f39433;
+    --bg-cinza: #f5f5f5;
     --bg-azul-topo: #0d8cc1;
     --bg-azul-meio: #076c87;
 }
@@ -175,7 +176,6 @@ header{
 /***   slider   **************************************************/
 #slider{
     margin-top: 120px;
-    border: 1px solid red;
 }
 
 #slider {
@@ -213,17 +213,18 @@ header{
 
 .nav {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: var(--vermelho);
+  top: 56.4%;
+  transform: translateY(-60%);
+  background-color: transparent;
   border: none;
   border-radius: 5px;
   color: white;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 2.4rem;
+  font-weight: 100;
   padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 2;
+  transition: color 0.3s ease;
 }
 
 .nav.prev {
@@ -235,5 +236,80 @@ header{
 }
 
 .nav:hover {
-  background-color: var(--preto);
+  color: #d3d2d2;  /* usando um cinza bem clarinho para dar um charme no botão nav */
 }
+
+/***   Refrix   **************************************************/
+#refrix .bg-refrix{
+    background: var(--bg-cinza);
+    height: 574px;
+}
+
+.bg-refrix .container{
+    display: flex;
+}
+
+.foto-refrix{
+    width: 570px;
+    height: 382px;
+    overflow: hidden;
+    margin-top: 96px;
+}
+
+.foto-refrix img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.foto-refrix img,
+.sobre-refrix{
+    max-width: 570px;
+}
+
+.sobre-refrix-txt{
+    margin-left: 34px;
+    margin-top: 96px;
+}
+
+.sobre-refrix-txt h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.313rem;
+    font-weight: 800;
+    color: var(--bg-azul-topo);
+    padding-top: 11px;
+    letter-spacing: -2px;
+}
+
+.sobre-refrix-txt h2::after{
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 3px solid #ff8f00;
+    margin-top: 12px;
+}
+
+.sobre-refrix-txt p{
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 28px;
+    color: #9d9d9d;
+}
+
+.sobre-refrix-txt a{
+    margin-top: 72px;
+    padding: 16px;
+    padding-left: 23px;
+    padding-right: 23px;
+    border-radius: 40px;
+    font-family: Sans-serif;
+    font-size: 0.938rem;
+    font-weight: 530;
+    background-color: var(--btn-verde);
+    color: var(--branco);
+    display: inline-block;
+}
+
+/***   Produtos   **************************************************/
