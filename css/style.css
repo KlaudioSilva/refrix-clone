@@ -24,6 +24,7 @@
     --verde-fonte: #80c34a;
     --btn-verde: #61ce70;
     --btn-laranja: #f39433;
+    --barra-laranja: #ff8f00;
     --bg-cinza: #f5f5f5;
     --bg-azul-topo: #0d8cc1;
     --bg-azul-meio: #076c87;
@@ -285,7 +286,7 @@ header{
     content: "";
     display: block;
     width: 50px;
-    border-bottom: 3px solid #ff8f00;
+    border-bottom: 3px solid var(--barra-laranja);
     margin-top: 12px;
 }
 
@@ -313,3 +314,112 @@ header{
 }
 
 /***   Produtos   **************************************************/
+#produtos{
+    background-color: var(--branco);
+}
+
+.titulo-secao{
+    height: 100px;
+    margin-top: 80px;
+}
+
+.titulo-secao h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.313rem;
+    font-weight: 800;
+    color: var(--bg-azul-topo);
+    padding-top: 11px;
+    letter-spacing: -2px;
+}
+
+.titulo-secao h2::after{
+    content: "";
+    display: block;
+    width: 50px;
+    border-bottom: 3px solid var(--barra-laranja);
+    margin-top: 12px;
+}
+
+.prods-xereta{
+    height: 377px;
+}
+
+.prods-xereta a{
+    display: inline-flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.prods-xereta button:hover{
+    background-color: var(--btn-verde);
+    transform: scale(0.98);
+}
+
+.prods-xereta button:hover p {
+    background-color: var(--btn-verde); /* ou qualquer cor que deseje no hover */
+}
+
+.prods-xereta button{
+    position: relative;
+    width: 356px;
+    border: 0;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 3px;
+    background-color: var(--bg-azul-topo);
+    padding-top: 4px;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.2s;
+}
+
+.prods-xereta button img{
+    height: auto;
+    display: block;
+    max-width: 100%;
+    border-radius: 3px;
+}
+
+button p{
+    display: block;
+    margin: 0;
+    background-color: var(--bg-azul-topo);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 18px;
+    border-radius: 30px 0px 0px 0px;
+    color: var(--branco);
+    text-align: right;
+    padding-left: 32px;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.6px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    transition: background-color 0.4s;
+}
+
+.prod-btn-todos{
+    text-align: center;
+    margin-bottom: 90px;
+    margin-top: 30px;
+}
+
+.prod-btn-todos a{
+    padding: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 40px;
+    font-family: Sans-serif;
+    font-size: 0.938rem;
+    font-weight: 530;
+    background-color: var(--btn-verde);
+    color: var(--branco);
+    display: inline-block;
+}
+
+/***   Terceirização   **************************************************/
+#terceirizacao .bg-terceirizacao{
+    background-color: var(--bg-azul-meio);
+}
