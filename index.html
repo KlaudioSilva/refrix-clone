@@ -113,7 +113,8 @@
             </div>
         </section>
 
-        <section id="produtos"> <!--seção produtos (exibição dos produtos da marca Xereta)-->
+        <!--seção produtos (exibição dos produtos da marca Xereta)-->
+        <section id="produtos"> 
             <div class="container">
                 <div class="titulo-secao">
                     <h2>Produtos</h2>
@@ -143,8 +144,9 @@
                 </div>
             </div>
         </section>
-            
-        <section id="terceirizacao"> <!--seção de terceirização (incentivo de contato para novos negócios)-->
+        
+        <!--seção de terceirização (incentivo de contato para novos negócios)-->
+        <section id="terceirizacao"> 
             <div class="bg-terceirizacao">
                 <div class="container">
                     <div class="tercerizacao-txt">
@@ -169,116 +171,135 @@
             </div>    
         </section>
 
-        <section id="fale_conosco"> <!--seção de contato (incluí mapa de localização e formulário de cadastro para contato)-->
+        <!--seção de contato (incluí mapa de localização e formulário de cadastro para contato)-->
+        <section id="contato"> 
             <div class="mapa-contato">
-                <div class="map-location">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.660382243024!2d-47.7019753!3d-23.109524999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c60df23ec741b5%3A0x9f0a4e14645ffc57!2sRefrix!5e0!3m2!1spt-BR!2sbr!4v1749319960612!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="mapa">
+                    <iframe src="https://maps.google.com/maps?q=R.%20Santa%20Terezinha%2C%20551%20Vila%20S%C3%A3o%20Geraldo%2C%20Tiet%C3%AA%20%E2%80%93%20SP%20CEP%3A%2018530-000&t=m&z=17&output=embed&iwloc=near" width="952" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 
-                <div class="fale-conosco">
-                    <h2>Fale Conosco</h2>
-                    <p>
-                        Estamos aqui para ajudar! Preencha o formulário abaixo para mais informações sobre nossos produtos e serviços. Nossa equipe terá prazer em responder às suas perguntas e oferecer orientações adicionais.
-                    </p>
-                    <span class="negrito"><span>Endedeço:</span> R. Santa Terezinha, 551 Vila São Geraldo, Tietê - SP</span> <br>
-                    <span class="negrito"><span>CEP:</span> 18531-000</span> <br>
-                    <span class="negrito"><span>E-mail:</span> sac@refrix.com.br</span> <br>
-                    <span class="negrito"><span>Telefone:</span> 15 3282-9800</span> <br>
-                    <span class="negrito"><span>WhatsApp:</span> (15) 99600-1005</span> <br>
-                    <span class="negrito"><span>SAC:</span> 0800 770 1021</span> <br>
-                    <form action="" class="fale">
-                        <input type="text" name="name-contact" placeholder="Nome"> <br>
-                        <input type="email" name="email-contact" placeholder="E-mail"> <br>
-                        <input type="tel" name="phone-contact" placeholder="Telefone"> <br>
-                        <input type="number" name="cnpj-contact" placeholder="CNPJ"> <br>
-                        <select name="state-contact" id="estado">
-                            <option value="">Selecione o estado</option>
-                            <option value="ac">Acre</option>
-                            <option value="al">Alagoas</option>
-                            <option value="ap">Amapá</option>
-                            <option value="am">Amazonas</option>
-                            <option value="ba">Bahia</option>
-                            <option value="ce">Ceará</option>
-                            <option value="es">Espírito Santo</option>
-                            <option value="df">Distrito Federal</option>
-                            <option value="go">Goiás</option>
-                            <option value="ma">Maranhão</option>
-                            <option value="mt">Mato Grosso</option>
-                            <option value="ms">Mato Grosso do Sul</option>
-                            <option value="mg">Minas Gerais</option>
-                            <option value="pa">Pará</option>
-                            <option value="pb">Paraíba</option>
-                            <option value="pr">Paraná</option>
-                            <option value="pe">Pernambuco</option>
-                            <option value="pi">Piauí</option>
-                            <option value="rj">Rio de Janeiro</option>
-                            <option value="rn">Rio Grande do Norte</option>
-                            <option value="rs">Rio Grande do Sul</option>
-                            <option value="ro">Rondônia</option>
-                            <option value="rr">Roraima</option>
-                            <option value="sc">Santa Catarina</option>
-                            <option value="sp">São Paulo</option>
-                            <option value="se">Sergipe</option>
-                            <option value="to">Tocantins</option>
-                        </select> <br>
-                        <input type="text" name="city-contact" placeholder="Cidade"> <br>
-                        <select id="dpto-area">
-                            <option value="">Área/Departamento (Selecione)</option>
-                            <option value="comercial">Área Comercial</option>
-                            <option value="financeiro">Área Financeira</option>
-                            <option value="marketing">Marketing</option>
-                            <option value="fiscal">Fiscal</option>
-                            <option value="compras">Compras</option>
-                            <option value="sac">SAC</option>
-                            <option value="rh">Recursos Humanos</option>
-                            <option value="novos-negocios">Novos Negócios</option>
-                        </select> <br>
-                        <select id="dpto-area-assunto" disabled>
-                            <option value="">Selecione Área/Departamento</option>
-                        </select> <br>
-                        <textarea name="mensagem" id="text-message"></textarea> <br>
+                <div class="container-fale-conosco">
+                    <div class="fale-conosco">
+                        <h2>Fale Conosco</h2>
+                        <p class="parag-txt">
+                            Estamos aqui para ajudar! Preencha o formulário abaixo para mais informações sobre nossos produtos e serviços. Nossa equipe terá prazer em responder às suas perguntas e oferecer orientações adicionais.
+                        </p>
+                        <!--
+                            <span><strong>Endedeço</strong>: R. Santa Terezinha, 551 Vila São Geraldo, Tietê - SP</span> <br>
+                            <span><strong>CEP:</strong> 18531-000</span> <br>
+                            <span><strong>E-mail:</strong> sac@refrix.com.br</span> <br>
+                            <span><strong>Telefone:</strong> (15) 3282-9800</span> <br>
+                            <span><strong>WhatsApp:</strong> (15) 99600-1005</span> <br>
+                            <span><strong>SAC:</strong> 0800 770 1021</span> <br>
+                        -->
                         
-                        <span class="span-txt">Anexar arquivo</span>
-                        <button type="submit">Escolher arquivo</button>
-                        <button type="submit">Enviar</button>
-                    </form>
+                        <p class="parag-contato">
+                            <strong>Endereço:</strong> R. Santa Terezinha, 551 Vila São Geraldo, Tietê - SP <br>
+                            <strong>CEP:</strong> 18531-000 <br>
+                            <strong>E-mail:</strong> sac@regrix.com.br <br>
+                            <strong>Telefone:</strong> (15) 3282-9800 <br>
+                            <strong>WhatsApp:</strong> (15) 99600-1005 <br>
+                            <strong>SAC:</strong> 0800 770 1021
+                        </p>
+                        <form class="frm-fale-conosco">
+                            <input type="text" name="name-contact" placeholder="Nome">
+                            <input type="email" name="email-contact" placeholder="E-mail">
+                            <input type="tel" name="phone-contact" placeholder="Telefone"> <br>
+                            <input type="number" name="cnpj-contact" placeholder="CNPJ">
+                            <select name="state-contact" id="estado">
+                                <option value="">Selecione o estado</option>
+                                <option value="ac">Acre</option>
+                                <option value="al">Alagoas</option>
+                                <option value="ap">Amapá</option>
+                                <option value="am">Amazonas</option>
+                                <option value="ba">Bahia</option>
+                                <option value="ce">Ceará</option>
+                                <option value="es">Espírito Santo</option>
+                                <option value="df">Distrito Federal</option>
+                                <option value="go">Goiás</option>
+                                <option value="ma">Maranhão</option>
+                                <option value="mt">Mato Grosso</option>
+                                <option value="ms">Mato Grosso do Sul</option>
+                                <option value="mg">Minas Gerais</option>
+                                <option value="pa">Pará</option>
+                                <option value="pb">Paraíba</option>
+                                <option value="pr">Paraná</option>
+                                <option value="pe">Pernambuco</option>
+                                <option value="pi">Piauí</option>
+                                <option value="rj">Rio de Janeiro</option>
+                                <option value="rn">Rio Grande do Norte</option>
+                                <option value="rs">Rio Grande do Sul</option>
+                                <option value="ro">Rondônia</option>
+                                <option value="rr">Roraima</option>
+                                <option value="sc">Santa Catarina</option>
+                                <option value="sp">São Paulo</option>
+                                <option value="se">Sergipe</option>
+                                <option value="to">Tocantins</option>
+                            </select> 
+                            <input type="text" name="city-contact" placeholder="Cidade"> <br>
+                            <select id="dpto-area" required>
+                                <option>Área/Departamento (Selecione)</option>
+                                <option value="comercial">Área Comercial</option>
+                                <option value="financeiro">Área Financeira</option>
+                                <option value="marketing">Marketing</option>
+                                <option value="fiscal">Fiscal</option>
+                                <option value="compras">Compras</option>
+                                <option value="sac">SAC</option>
+                                <option value="rh">Recursos Humanos</option>
+                                <option value="novos-negocios">Novos Negócios</option>
+                            </select>
+                            <select id="dpto-area-assunto" disabled>
+                                <option value="">Selecione Área/Departamento</option>
+                            </select> <br>
+                            <textarea name="mensagem" id="text-message">mensagem</textarea> <br>
+
+                            <div class="fim-form">
+                                <span class="span-txt">Anexar arquivo:</span>
+                                <input type="file" name="anexo" id="anexo">
+                            </div>
+                            
+                            <input type="submit" value="Enviar">
+                            
+                        </form>
+                    </div>
+                    
                 </div>
             </div> 
         </section>
 
-        <section id="pre-footer"> <!--pré footer (incluí logotipo, menu de acesso rápido e formulário de inscrição para newslatter)-->
-            <!--
-            <div class="estrutura">
-                <div class="logo">
-                    <img src="imgs/logo_footer.png" alt="">
+        <!--pré footer (incluí logotipo, menu de acesso rápido e formulário de inscrição para newslatter)-->
+        <section id="pre-footer"> 
+            
+            <div class="container">
+                <div class="logo-footer">
+                    <img src="imgs/logo_footer.png" alt=""> <br>
+                    <span>Telefone: <strong>(15) 3282-9800</strong></span> <br>
+                    <span>SAC: <strong>0800 770 1021</strong></span>
                 </div>
-                <span>Telefone: <span class="negrito">(15) 3282-9800</span></span> <br>
-                <span>SAC: <span class="negrito">0800 770 1021</span></span>
                 <div class="acesso-rapido">
-                    <h3>Acesso rápido</h3>
+                    <h4>Acesso rápido</h4>
                     <ul class="acesso-rapdio-menu">
-                        <li>Empresa</li>
-                        <li>Produtos</li>
-                        <li>Exportação</li>
-                        <li>Tereceirização</li>
-                        <li>Onde encontrar</li>
-                        <li>Contato</li>
-                        <li>Download das marcas</li>
-                        <li>Trabalhe conosco</li>
-                        <li>Eventos</li>
-                        <li>Políticas ESG</li>
+                        <li><a href="#">Empresa</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Exportação</a></li>
+                        <li><a href="#">Terceirização</a></li>
+                        <li><a href="#">Onde encontrar</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Download das marcas</a></li>
+                        <li><a href="#">Trabalhe conosco</a></li>
+                        <li><a href="#">Eventos</a></li>
+                        <li><a href="#">Políticas ESG</a></li>
                     </ul>
                 </div>
                 <div class="form-novidades">
                     <form action="">
-                        <h3>Receba novidades</h3>
+                        <h4>Receba novidades</h4>
                         <input type="text" name="name-news" placeholder="Nome"> <br>
                         <input type="email" name="email-news" placeholder="Email"> <br>
-                        <input type="submit" value="inscreva-se">
+                        <button type="submit" class="btn-submit">Inscreva-se</button>
                     </form>
                 </div>
             </div>
-            -->
         </section>
 
         <section> <!--seção do footer-->
