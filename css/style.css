@@ -45,12 +45,23 @@ header{
     z-index: 100;
 }
 
-
 /***   topo   ***************************************************************/
 #topo{
     height: 40px;
     background: var(--bg-azul-topo);
     display: flex;
+    transition:
+    height 0.3s ease,
+    padding 0.3s ease,
+    opacity 0.3s ease;
+    overflow: hidden;
+
+}
+
+#topo.escondido {
+    height: 0;
+    padding: 0;
+    opacity: 0;
 }
 
 .nav-topo{
@@ -60,7 +71,7 @@ header{
 
 .nav-topo a{
     color: var(--branco);
-    font-size: 0.875rem;
+    font-size: 0.850rem;
     font-weight: 400;
     font-style: normal;
     padding: 0 12px;
@@ -81,6 +92,11 @@ header{
 #navegacao{
     height: 80px;
     background: var(--branco);
+}
+
+#navegacao.sombra {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease;
 }
 
 .logotipo img{
@@ -570,6 +586,17 @@ input[type="submit"]:hover{
     margin-left: 10px;
 }
 
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="number"]::placeholder,
+#estado::placeholder,
+#dpto-area::placeholder,
+#dpto-area-assunto::placeholder,
+textarea::placeholder{
+    color: var(--cinza-fonte2);
+}
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -581,6 +608,7 @@ input[type="number"]{
     font-size: 14px;
     box-sizing: border-box;
     margin-bottom: 15px;
+    color: var(--cinza-fonte4);
 }
 
 input[type="text"]:focus,
@@ -593,6 +621,7 @@ input[type="number"]:focus,
 textarea:focus{
     border: 1px solid #f3f2f2;
     outline: none;
+    color: var(--cinza-fonte4);
 }
 
 #estado{
@@ -617,7 +646,7 @@ textarea:focus{
     padding: 5px 0px;
     border-radius: 4px;
     font-size: 14px;
-    color: var(--cinza-fonte4);
+    color: var(--cinza-fonte1);
     box-sizing: border-box;
     margin-bottom: 15px;
 }
@@ -667,10 +696,6 @@ textarea{
     margin-left: 20px;
 }
 
-input[type="submit"] .inscreva{
-    width: 20;
-}
-
 .acesso-rapido{
     width: 346px;
 }
@@ -686,6 +711,7 @@ input[type="submit"] .inscreva{
 .acesso-rapido a{
     color: var(--cinza-fonte2);
     font-weight: 400;
+    line-height: 1.5rem;
 }
 
 .acesso-rapido a:hover{
@@ -706,6 +732,45 @@ input[type="submit"] .inscreva{
     margin-bottom: 20px;
 }
 
+.form-novidades input[type="text"]::placeholder,
+.form-novidades input[type="email"]::placeholder{
+    color: var(--cinza-fonte1);
+}
+
+.form-novidades input[type="text"],
+.form-novidades input[type="email"]{
+    width: 346px;
+    border-radius: 2px;
+    border: 1px solid var(--cinza-fonte1);
+    padding: 12px 15px;
+    margin-bottom: 22px;
+    color: var(--cinza-fonte1);
+    background-color: var(--cinza-medio);
+}
+
+.form-novidades input[type="text"]:focus,
+.form-novidades input[type="email"]:focus{
+    border-color: var(--btn-laranja);
+    color: var(--cinza-fonte4);
+}
+
+.btn-submit{
+    text-transform: uppercase;
+    background-color: var(--btn-laranja);
+    color: rgba(255, 255, 255, 0.7);
+    border: none;
+    line-height: 1.3rem;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 18px 9px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-submit:hover{
+    background-color: #db812c;
+}
+
 /***   footer   ************************************************************/
 footer{
     background: var(--cinza-escuro);
@@ -718,4 +783,3 @@ footer{
     padding-bottom: 15px;
     line-height: -0.5px;
 }
-

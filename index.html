@@ -114,7 +114,7 @@
         </section>
 
         <!--seção produtos (exibição dos produtos da marca Xereta)-->
-        <section id="produtos"> 
+        <section id="produtos" class="branca"> 
             <div class="container">
                 <div class="titulo-secao">
                     <h2>Produtos</h2>
@@ -172,7 +172,7 @@
         </section>
 
         <!--seção de contato (incluí mapa de localização e formulário de cadastro para contato)-->
-        <section id="contato"> 
+        <section id="contato" class="branca"> 
             <div class="mapa-contato">
                 <div class="mapa">
                     <iframe src="https://maps.google.com/maps?q=R.%20Santa%20Terezinha%2C%20551%20Vila%20S%C3%A3o%20Geraldo%2C%20Tiet%C3%AA%20%E2%80%93%20SP%20CEP%3A%2018530-000&t=m&z=17&output=embed&iwloc=near" width="952" height="750" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -184,15 +184,6 @@
                         <p class="parag-txt">
                             Estamos aqui para ajudar! Preencha o formulário abaixo para mais informações sobre nossos produtos e serviços. Nossa equipe terá prazer em responder às suas perguntas e oferecer orientações adicionais.
                         </p>
-                        <!--
-                            <span><strong>Endedeço</strong>: R. Santa Terezinha, 551 Vila São Geraldo, Tietê - SP</span> <br>
-                            <span><strong>CEP:</strong> 18531-000</span> <br>
-                            <span><strong>E-mail:</strong> sac@refrix.com.br</span> <br>
-                            <span><strong>Telefone:</strong> (15) 3282-9800</span> <br>
-                            <span><strong>WhatsApp:</strong> (15) 99600-1005</span> <br>
-                            <span><strong>SAC:</strong> 0800 770 1021</span> <br>
-                        -->
-                        
                         <p class="parag-contato">
                             <strong>Endereço:</strong> R. Santa Terezinha, 551 Vila São Geraldo, Tietê - SP <br>
                             <strong>CEP:</strong> 18531-000 <br>
@@ -201,12 +192,12 @@
                             <strong>WhatsApp:</strong> (15) 99600-1005 <br>
                             <strong>SAC:</strong> 0800 770 1021
                         </p>
-                        <form class="frm-fale-conosco">
-                            <input type="text" name="name-contact" placeholder="Nome">
-                            <input type="email" name="email-contact" placeholder="E-mail">
-                            <input type="tel" name="phone-contact" placeholder="Telefone"> <br>
+                        <form class="frm-fale-conosco"> <!--este é um formulário de contato-->
+                            <input type="text" name="name-contact" placeholder="Nome" required>
+                            <input type="email" name="email-contact" placeholder="E-mail" required>
+                            <input type="tel" name="phone-contact" placeholder="Telefone" required> <br>
                             <input type="number" name="cnpj-contact" placeholder="CNPJ">
-                            <select name="state-contact" id="estado">
+                            <select name="state-contact" id="estado" required>
                                 <option value="">Selecione o estado</option>
                                 <option value="ac">Acre</option>
                                 <option value="al">Alagoas</option>
@@ -236,22 +227,62 @@
                                 <option value="se">Sergipe</option>
                                 <option value="to">Tocantins</option>
                             </select> 
-                            <input type="text" name="city-contact" placeholder="Cidade"> <br>
-                            <select id="dpto-area" required>
+                            <input type="text" name="city-contact" placeholder="Cidade" required> <br>
+
+                            <select id="dpto-area" required> <!--select principal-->
                                 <option>Área/Departamento (Selecione)</option>
-                                <option value="comercial">Área Comercial</option>
-                                <option value="financeiro">Área Financeira</option>
-                                <option value="marketing">Marketing</option>
-                                <option value="fiscal">Fiscal</option>
-                                <option value="compras">Compras</option>
-                                <option value="sac">SAC</option>
-                                <option value="rh">Recursos Humanos</option>
-                                <option value="novos-negocios">Novos Negócios</option>
+                                <option value="area-comercial">Área Comercial</option>
+                                <option value="area-financeiro">Área Financeira</option>
+                                <option value="area-marketing">Marketing</option>
+                                <option value="area-fiscal">Fiscal</option>
+                                <option value="area-compras">Compras</option>
+                                <option value="area-sac">SAC</option>
+                                <option value="area-rh">Recursos Humanos</option>
+                                <option value="area-novos-negocios">Novos Negócios</option>
                             </select>
-                            <select id="dpto-area-assunto" disabled>
+
+                            <select id="dpto-area-assunto" required> <!--select secundario-->
                                 <option value="">Selecione Área/Departamento</option>
+
+                                <optgroup label="Área Comercial" id="opt-area-comercial">
+                                    <option value="desconto-comercial">Desconto Comercial</option>
+                                    <option value="cadastro">Cadastro</option>
+                                    <option value="orcamento">Orçamento</option>
+                                </optgroup>
+
+                                <optgroup label="Área Financeira" id="opt-area-financeiro">
+                                    <option value="boletos">Boletos</option>
+                                </optgroup>
+
+                                <optgroup label="Marketing" id="opt-area-marketing">
+                                    <option value="doacao">Doação</option>
+                                    <option value="patrocinio">Patrocínio</option>
+                                    <option value="eventos">Eventos</option>
+                                </optgroup>
+
+                                <optgroup label="Área Fiscal" id="opt-area-fiscal">
+                                    <option value="fiscal">Fiscal</option>
+                                </optgroup>
+
+                                <optgroup label="Compras" id="opt-area-compras">
+                                    <option value="compras">Compras</option>
+                                </optgroup>
+
+                                <optgroup label="SAC" id="opt-area-sac">
+                                    <option value="reclamacao">Reclamação</option>
+                                    <option value="elogio">Elogio</option>
+                                    <option value="sugestões">Sugestões</option>
+                                </optgroup>
+
+                                <optgroup label="Recursos Humanos" id="opt-area-rh">
+                                    <option value="curriculo">Currículo</option>
+                                </optgroup>
+                                <optgroup label="Novos Negócios" id="opt-area-novos-negocios">
+                                    <option value="terceirizacao">Terceirização</option>
+                                </optgroup>
+
                             </select> <br>
-                            <textarea name="mensagem" id="text-message">mensagem</textarea> <br>
+                            <textarea name="mensagem" id="text-message" placeholder="mensagem"></textarea> <br>
 
                             <div class="fim-form">
                                 <span class="span-txt">Anexar arquivo:</span>
@@ -262,7 +293,6 @@
                             
                         </form>
                     </div>
-                    
                 </div>
             </div> 
         </section>
@@ -291,12 +321,12 @@
                         <li><a href="#">Políticas ESG</a></li>
                     </ul>
                 </div>
-                <div class="form-novidades">
-                    <form action="">
+                <div>
+                    <form class="form-novidades"> <!--este é um formulário para a newsletter da Refrix-->
                         <h4>Receba novidades</h4>
-                        <input type="text" name="name-news" placeholder="Nome"> <br>
-                        <input type="email" name="email-news" placeholder="Email"> <br>
-                        <button type="submit" class="btn-submit">Inscreva-se</button>
+                        <input type="text" class="news" name="name-news" placeholder="Nome"> <br>
+                        <input type="email" class="news" name="email-news" placeholder="Email"> <br>
+                        <button type="submit" class="btn-submit" alt="clique para se inscrever">Inscreva-se</button>
                     </form>
                 </div>
             </div>
@@ -309,37 +339,6 @@
             </footer>
         </section>
 
-        <script>
-            
-            let currentSlide = 0;
-            const slides = document.querySelectorAll('.slide');
-            const nextBtn = document.querySelector('.next');
-            const prevBtn = document.querySelector('.prev');
-
-            function showSlide(index) {
-                slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-                });
-            }
-
-            function nextSlide() {
-                currentSlide = (currentSlide + 1) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            function prevSlide() {
-                currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-                showSlide(currentSlide);
-            }
-
-            nextBtn.addEventListener('click', nextSlide);
-            prevBtn.addEventListener('click', prevSlide);
-
-            // Auto troca a cada 5 segundos
-            setInterval(nextSlide, 5000);
-
-            // Inicial
-            showSlide(currentSlide);
-        </script>
+        <script src="js/script.js"></script>
     </body>
 </html>
