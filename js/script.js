@@ -39,6 +39,7 @@ window.addEventListener('scroll', () => {
 // Também verifica na primeira carga
 window.addEventListener('load', verificarSombra);
 
+
 // Animação de slider (mantida como estava)
 let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
@@ -66,6 +67,28 @@ prevBtn.addEventListener('click', prevSlide);
 
 setInterval(nextSlide, 5000);
 showSlide(currentSlide);
+
+
+//mascara para o campo de cnpj
+const cnpjInput = document.getElementById('cnpj-contact');
+
+cnpjInput.addEventListener('input', function (e) {
+    let valor = e.target.value;
+
+// Remove tudo que não for número
+valor = valor.replace(/\D/g, '');
+
+// Aplica a máscara
+if (valor.length > 14) valor = valor.slice(0, 14);
+    valor = valor.replace(/^(\d{2})(\d)/, '$1.$2');
+    valor = valor.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+    valor = valor.replace(/\.(\d{3})(\d)/, '.$1/$2');
+    valor = valor.replace(/(\d{4})(\d)/, '$1-$2');
+
+// Atualiza o valor do input
+    e.target.value = valor;
+});
+
 
 //campo de seleção de interesses no formulario de contato
 const areaSelect = document.getElementById('dpto-area');
