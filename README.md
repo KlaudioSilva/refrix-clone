@@ -10,7 +10,7 @@ Este projeto consiste em um **clone** do site da **Refrix**, uma empresa especia
 
 ## 📸 Preview
 
-![Preview do site](./images/preview.png)
+![Preview do site](./imgs/preview.png)
 
 
 
